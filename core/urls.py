@@ -22,15 +22,12 @@ from django.urls import path
 import logging
 from django.http import JsonResponse
 
-import logging
-from django.http import JsonResponse
-
 # Obtenha o logger configurado
 logger = logging.getLogger('requestlogs')
 
 def test_logging_view(request):
     try:
-        data = {'user': 'eu', 'email': 'eu@contato.com'}
+        data = {'user': 'eu', 'email': '@contato.com'}
         # Força um erro proposital para testar o log
         raise ValueError("Erro simulado no envio de email")
     except Exception as e:
