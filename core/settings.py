@@ -72,8 +72,8 @@ THIRD_APPS = [ # são as Lib/app que instalamos no projeto
 ]
 
 PROJECT_APPS = [ # são os apps que criamos no projeto 
-       'apps.base',		# update 11/03/2024
-        # 'apps.myapp',   # Removido esses apps que nao criamos ainda.
+    'apps.base', 
+    'apps.pages', 
 ]
 
 # INSTALLED_APPS é a variavel que django entende para fazer a leitura \
@@ -109,6 +109,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'core.context_processors.context_social', 
             ],
         },
     },
